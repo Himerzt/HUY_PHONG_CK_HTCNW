@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product_list</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        $(document).ready(function(){
+            var i = 3;
+            function KiemtraTENSP(){
+                var rgc = /^[a-zA-Z0-9]+$/;
+                if(  rgc.test($("#txtTenSP").val()) == true ) {
+                    $("#tb_ten_SP").html("Tên sản phẩm hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_ten_SP").html("Tên sản phẩm không hợp lệ");          
+                    return false;
+                }
+            }            
+            $("#txtTenSP").blur(KiemtraTENSP);
+
+            function KiemtraMaSP(){
+                var rgc = /^SP_[0-9]{4}$/;
+                if(  rgc.test($("#txtMaSp").val()) == true ) {
+                    $("#tb_ma_SP").html("Mã sản phẩm hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_ma_SP").html("Mã sản phẩm không hợp lệ");          
+                    return false;
+                }
+            }            
+            $("#txtMaSp").blur(KiemtraMaSP);
+
+            function KiemtraGia(){
+                var rgc = /^[1-9][0-9]{6,}$/;
+                if(  rgc.test($("#txtGia").val()) == true ) {
+                    $("#tb_gia_SP").html("Giá sản phẩm hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_gia_SP").html("Giá sản phẩm không hợp lệ");          
+                    return false;
+                }
+            }            
+            $("#txtGia").blur(KiemtraGia);
+
+            $("#SAVE_BTN").click(function(){
+                i= i+1;
+                if ( !KiemtraTENSP() || !KiemtraMaSP() || !KiemtraGia()  ){
+                    $("#tb_Tobu").html("Mời bạn nhập đúng và đủ thông tin")
+                }else {
+                    $("#tb_Tobu").html("");     
+                }
+                var ten = $("#txtTenSP").val();
+                var masp = $("#txtMaSp").val();
+                var gia = $("#txtGia").val();
+                var them = "<tr> <td>" + (i) + "</td><td>" + ten + "</td><td>" +  masp + "</td><td>" + gia + "</td></tr>";
+                $("table tbody").append(them);
+                $("#My_MODAL").modal("hide");
+
+
+                return true;
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo_bar">
+            <a href="../index.html"><img src="../img/logo_1.png" alt=""></a>
+        </div>
+        <div class="menu_bar">
+            <ul class="menu_bar_cover">
+                <li><a href="#TiVi">TV</a></li>
+                <li><a href="#NEOQLED">Neo QLED</a></li>
+                <li><a href="#OLEDDD">OLED TV</a></li>
+                <li><a href="#CRYSTALLL">Crystal UHD</a></li>
+                <li><a href="#fhd_tv">Full HD & HD TV</a></li>
+            </ul>
+        </div>
+        <div class="side_bar">
+            <ul class="side_bar_cover">
+                <li><a href="#HOTROOO">Hỗ trợ</a></li>
+                <li style="margin-right: 16px;"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>                
+                <h6>*</h6>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <h1>Danh sách sản phẩm</h1>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Mã</th>
+                    <th scope="col">Giá</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Crystal UHD</td>
+                    <td>SP_0001</td>
+                    <td>150000000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>QLED</td>
+                    <td>SP_0002</td>
+                    <td>200000000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>HD Tivi</td>
+                    <td>SP_0003</td>
+                    <td>90000000</td>
+                  </tr>
+                </tbody>
+            </table>
+        
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#My_MODAL">
+            Thêm sản phấm
+        </button>
+    </div>
+    
+    <div class="modal fade" id="My_MODAL" tabindex="-1" role="dialog" aria-labelledby="title_long" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="title_long">Sản phẩm muốn thêm</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="txtTenSP">Tên sản phẩm</label>
+                      <input type="text" class="form-control" id="txtTenSP" placeholder="Nhập tên sản phẩm">
+                      <span id="tb_ten_SP"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="txtMaSp">Mã sản phấm</label>
+                      <input type="text" class="form-control" id="txtMaSp" placeholder="Nhập mã sản phẩm">
+                      <span id="tb_ma_SP"></span>
+                      
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="txtGia">Giá</label>
+                        <input type="text" class="form-control" id="txtGia" placeholder="Nhập giá cả">
+                        <span id="tb_gia_SP"></span>
+                    </div>
+                  </form>
+                  <span id="tb_Tobu"></span>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary" id="SAVE_BTN">Lưu</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

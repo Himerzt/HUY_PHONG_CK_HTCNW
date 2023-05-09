@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về Chúng Tôi</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    text-decoration: none   ;
+    list-style-type: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    box-shadow: 0 .5px  rgba(0, 0, 0, .2);
+    margin: 0 0%;
+}
+
+.header .menu_bar_cover,
+.header .side_bar_cover
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    position: relative;
+}
+
+.header .menu_bar_cover li
+{
+    margin: 0 10px;
+    padding: 3px 6px;
+}
+.header .side_bar_cover li
+{
+    margin: 0 6px;
+    padding: 2px 2px;
+}
+.header .menu_bar_cover li a,
+.header .side_bar_cover li a
+{
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header .menu_bar_cover li:hover,
+.header .side_bar_cover li:hover{
+    box-shadow: 0 2px  rgba(0, 0, 0, .6),
+    0 2.25px  rgba(116, 37, 37, 0.6),
+    0 2.5px  rgba(168, 38, 38, 0.6),
+    0 2.75px  rgba(122, 20, 20, 0.6);
+    transition: all .35s ease-in-out;
+    opacity: .7;
+    color: red;
+}
+/* main */
+.main h1{
+    text-align: center;
+    margin: 20px;
+}
+.main h2{
+    text-align: center;
+    margin: 20px 0px 50px;
+}
+.member {
+    display: flex;
+    justify-content: space-around;
+}
+
+.member-item img{
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.member-item p{
+    text-align: center;
+    size: 50px;
+    margin: 0px;
+}
+
+.member-item h2{
+    text-align: center;
+    margin: 0px;
+}
+.f_box{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #000;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.foot_box{
+    margin-top: 20px;
+    width: 15%;
+    border-left: 1px solid black ;
+    padding-left: 20px;
+}
+
+.policy_connect {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+
+.policy_connect  .icon_boxx
+{
+    display: flex;
+    justify-content: space-between;
+}
+.policy_connect  .connect_us h3{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.policy_connect  .icon_boxx li a{
+    font-size: 36px;
+    color: #000;
+    opacity: 0.8;
+}
+
+.policy_connect  .icon_boxx li:hover a {
+    opacity: .6;
+    box-shadow: 0 2px  rgba(0, 0, 0, .6),
+    0 2.25px  rgba(116, 37, 37, 0.6),
+    0 2.5px  rgba(168, 38, 38, 0.6),
+    0 2.75px  rgba(122, 20, 20, 0.6);
+    transition: all .35s ease-in-out;
+    opacity: .7;
+    color: red;
+}
+.header img{
+    width: 100px;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo_bar">
+            <a href="/index.html"><img src="../img/logo_1.png" alt=""></a>
+        </div>
+        <div class="menu_bar">
+            <ul class="menu_bar_cover">
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Neo QLED</a></li>
+                <li><a href="#">QLED TV</a></li>
+                <li><a href="#">Crystal UHD</a></li>
+                <li><a href="#">Full HD & HD TV</a></li>
+            </ul>
+        </div>
+        <div class="side_bar">
+            <ul class="side_bar_cover">
+                <li><a href="#">Hỗ trợ</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+               
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <h1>Giới thiệu website</h1>
+        <h2>Là website giới thiệu, bán TV trực tuyến</h2>
+        <h1>Thành viên thực hiện</h1>
+        <div class="member">
+            <div class="member-item">
+                <img src="../img/user/phong.jpg" alt="">
+                <h2 class="des">Trần Hoài Phong</h2>
+                <p class="des">21091671</p>
+                <p class="des">DHCTT17B</p>
+            </div>
+            <div class="member-item">
+                <img src="../img/user/huy.jpg" alt="">
+                <h2 class="des">Nguyễn Quốc Huy</h2 >
+                <p class="des">21121331</p>
+                <p class="des">DHKHMT17B</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="f_box">
+            <div class="foot_box">
+                <h2>Sản phẩm</h2>
+                <p class="p_footer_box">TV</p>
+                <p class="p_footer_box">OLED</p>
+                <p class="p_footer_box">QLED</p>
+                <p class="p_footer_box">HD</p>
+            </div>
+            <div class="foot_box">
+                <h2>Mua trực tuyến</h2>
+                <p class="p_footer_box">Ưu đãi sinh viên</p>
+                <p class="p_footer_box">Ưu đãi độc quyền</p>
+                <p class="p_footer_box">Tìm cửa hàng</p>
+                <p class="p_footer_box">Khám phá</p>
+            </div>
+            <div class="foot_box">
+                <h2>Bạn cần hỗ trợ</h2>
+                <p class="p_footer_box">Hỗ trợ mua trực tuyến</p>
+                <p class="p_footer_box">Đặt lịch sửa chữa</p>
+                <p class="p_footer_box">Trung tâm bảo hành</p>
+            </div>
+            <div class="foot_box">
+                <h2>Giới thiệu về chúng tôi</h2>
+                <p class="p_footer_box">Thành viên</p>
+                <p class="p_footer_box">Sản phẩm</p>
+            </div>
+        </div>
+        <div class="policy_connect">
+            <div class="policy__">
+                <li>
+                    <a href="#">
+                        <p>Chính sách đổi trả</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">        
+                        <p>Chính sách bảo hành</p>
+                    </a>
+                </li>
+            </div>
+            <div class="connect_us">
+                <h3>Kết nối với chúng tôi</h3>
+                <div class="icon_boxx">
+                    <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fas fa-home"></i></a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

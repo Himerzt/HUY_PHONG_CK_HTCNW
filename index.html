@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVHP</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+</head>
+
+<body>
+
+    <div class="modal fade" id="cartModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center><h4>Giỏ hàng của bạn</h4></center>
+                    <button type="button" class="btn btn-close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-borderd" id="MDCART">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Giá</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4>
+                        Tổng : <span id="thongbaogia"></span>
+                    </h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="header">
+        <div class="logo_bar">
+            <a href="/index.html"><img src="./img/logo_1.png" alt=""></a>
+        </div>
+        <div class="menu_bar">
+            <ul class="menu_bar_cover">
+                <li><a href="#TiVi">TV</a></li>
+                <li><a href="#NEOQLED">Neo QLED</a></li>
+                <li><a href="#OLEDDD">OLED TV</a></li>
+                <li><a href="#CRYSTALLL">Crystal UHD</a></li>
+                <li><a href="#fhd_tv">Full HD & HD TV</a></li>
+            </ul>
+        </div>
+        <div class="side_bar">
+            <ul class="side_bar_cover">
+                <li><a href="#HOTROOO">Hỗ trợ</a></li>
+                <li style="margin-right: 16px;"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li>
+                    <a href="#">
+                        <i style="padding: 8px 10px 0 10px; margin-right: 10px;"  class="fa-solid fa-cart-shopping" data-toggle="modal" data-target="#cartModal"></i>
+                        <span id="thongbao_carttt" style="color: rgb(253, 97, 97)
+                        ; height: 16px; width: 16px; position: absolute; top: 16px; left: 128px; border-radius: 10px;" ></span>
+                    </a>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+                        Đăng nhập
+                    </button>
+                </li>
+                <h6>*</h6>
+            </ul>
+        </div>
+    </header>
+    <div class="bodyy">
+        <div class="banner_container">
+            <div class="banner banner1">
+                <h2>Neo QLED 8K</h2>
+                <p>Theo dấu huyền thoại trên TV</p>
+            </div>
+            <div class="banner banner2">
+                <h2>Crystal UHD TV</h2>
+                <p>Trải nghiệm hình ảnh UHD đỉnh cao</p>
+            </div>
+            <div class="banner banner3">
+                <h2>QLED TV</h2>
+                <p>Đỉnh cao công nghệ TV</p>
+            </div>
+            <div class="banner banner4">
+                <h2>Samsung TV</h2>
+                <p>Lựa chọn TV phù hợp với bạn</p>
+            </div>
+            <div class="banner banner1">
+                <h2>Neo QLED 8K</h2>
+                <p>Theo dấu huyền thoại trên TV</p>
+            </div>
+        </div>
+
+        <div class="above_tv_show">
+            <ul>
+                <li>Bộ lọc</li>
+                <li> 20 kết quả</li>
+            </ul>
+            <li>Tìm hiểu thêm</li>
+        </div>
+
+        <div class="tv_show_buy">
+            <div class="buy_option">
+                <div class="option_cover_type">
+                    <ul>
+                        <h4>Dòng TV</h4>
+                        <li><a href="#"><input type="radio" name="" id="">OLED</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">Neo QLED 8k</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">Neo QLED 4k</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">QLED 4k</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">Crystal UHD</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">Full HD & HD TV</a></li>
+                    </ul>
+                </div>
+                <div class="option_cover_type">
+                    <ul>
+                        <h4>Độ Phân Giải</h4>
+                        <li><a href="#"><input type="radio" name="" id="">8k</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">4k</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">FHD / HD </a></li>
+                    </ul>
+                </div>
+                <div class="option_cover_type">
+                    <ul>
+                        <h4>Kích thước màn hình</h4>
+                        <li><a href="#"><input type="radio" name="" id="">Trên 80 inch</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">75 inch</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">60-70 inch</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">50-58 inch</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">Dưới 50 inch</a></li>
+                    </ul>
+                </div>
+                <div class="option_cover_type">
+                    <ul>
+                        <h4>Tính năng</h4>
+                        <li><a href="#"><input type="radio" name="" id="">SMART TV</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">TV màn hình cong</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">Công Nghệ Chấm Lượng Tử</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">Công Nghệ Mở Rộng Dải Màu</a></li>
+                        <li><a href="#"><input type="radio" name="" id="">One Remote Control</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="buy_information" id="TiVi">
+
+                <!-- PRODUCT 01  -->
+                <div class="product__" id="CRYSTALLL">
+                    <div class="product_img">
+                        <a href="./html/product1.html">
+                            <img src="./img/Product/product_crystal_uhd_cu8000.webp" alt="" id="sppr1">
+                        </a>
+                    </div>
+                    <div class="product_short">
+                        <h3>43 inch Crystal UHD 4K CU8000</h3>
+                        <p> Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                    </div>
+                    <div class="product_function">
+                        <p>Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                        <p>Bộ xử lý Hình ảnh Crystal 4K</p>
+                        <p>Smart Hub</p>
+                        <div class="btn__buy">
+                            <button type="button" class="btn carttttt-btn" id="btn_cart1">Thêm giỏ hàng</button>
+                        </div>
+                        <div class="location"><a href="https://www.google.com/maps/place/Industrial+University+of+Ho+Chi+Minh+City/@10.8221589,106.6842651,17z/data=!3m1!4b1!4m6!3m5!1s0x3174deb3ef536f31:0x8b7bb8b7c956157b!8m2!3d10.8221589!4d106.6868454!16s%2Fm%2F02pyzdj"><i class="fas fa-map-marker-alt"></i> Nơi mua</a></div>
+                    </div>
+                </div>
+
+
+
+                <!-- PRODUCT 02 -->
+                <div class="product__">
+                    <div class="product_img">
+                        <a href="./html/product1.html">
+                            <img src="./img/Product/product_crystal_uhd_cu8500.webp" alt="" id="sppr2">
+                        </a>
+                    </div>
+                    <div class="product_short">
+                        <h3>43 inch Crystal UHD 4K CU8500</h3>
+                        <p> Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                    </div>
+                    <div class="product_function">
+                        <p>Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                        <p>Bộ xử lý Hình ảnh Crystal 4K</p>
+                        <div class="btn__buy">
+                            <button type="button" class="btn carttttt-btn" id="btn_cart2">Thêm giỏ hàng</button>
+                        </div>
+                        <div class="location"><a href="https://www.google.com/maps/place/Industrial+University+of+Ho+Chi+Minh+City/@10.8221589,106.6842651,17z/data=!3m1!4b1!4m6!3m5!1s0x3174deb3ef536f31:0x8b7bb8b7c956157b!8m2!3d10.8221589!4d106.6868454!16s%2Fm%2F02pyzdj"><i class="fas fa-map-marker-alt"></i> Nơi mua</a></div>
+                    </div>
+                </div>
+
+                <!-- PRODUC 03 -->
+                <div class="product__" id="fhd_tv">
+                    <div class="product_img">
+                        <a href="./html/product1.html">
+                            <img src="./img/Product/product_hd_t4310.webp" alt="" id="sppr3">
+                        </a>
+                    </div>
+                    <div class="product_short">
+                        <h3>32 inch HD T4500</h3>
+                        <p> Công nghệ Contrast Enhancer tăng chiều sâu hình ảnh</p>
+                        <p>Màu sắc hiển thị sống động với công nghệ PurColor</p>
+                    </div>
+                    <div class="product_function">
+                        <p>Giảm ngay 10% sản phẩm TV</p>
+                        <p>Miễn Phí Vận Chuyển Toàn Quốc</p>
+                        <p>Trả Góp 0%</p>
+                        <div class="btn__buy">
+                            <button type="button" class="btn carttttt-btn" id="btn_cart3">Thêm giỏ hàng</button>
+                        </div>
+                        <div class="location"><a href="https://www.google.com/maps/place/Industrial+University+of+Ho+Chi+Minh+City/@10.8221589,106.6842651,17z/data=!3m1!4b1!4m6!3m5!1s0x3174deb3ef536f31:0x8b7bb8b7c956157b!8m2!3d10.8221589!4d106.6868454!16s%2Fm%2F02pyzdj"><i class="fas fa-map-marker-alt"></i> Nơi mua</a></div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 04 -->
+                <div class="product__" id="OLEDDD">
+                    <div class="product_img">
+                        <a href="./html/product1.html">
+                            <img src="./img/Product/product_oled_s90c.webp" alt="" id="sppr4">
+                        </a>
+                    </div>
+                    <div class="product_short">
+                        <h3>65 inch OLED 4K S90C</h3>
+                        <p>Công nghệ OLED</p>
+                        <p>Thiết kế Laser siêu mỏng</p>
+                        <p>Bộ xử lý Neural Quantum 4K</p>
+                    </div>
+                    <div class="product_function">
+                        <p>Công nghệ OLED</p>
+                        <p>Thiết kế Laser siêu mỏng</p>
+                        <p>Bộ xử lý Neural Quantum 4K</p>
+                        <p>Motion Xcelerator Turbo Pro</p>
+                        <div class="btn__buy">
+                            <button type="button" class="btn carttttt-btn" id="btn_cart4">Thêm giỏ hàng</button>
+                        </div>
+                        <div class="location"><a href="https://www.google.com/maps/place/Industrial+University+of+Ho+Chi+Minh+City/@10.8221589,106.6842651,17z/data=!3m1!4b1!4m6!3m5!1s0x3174deb3ef536f31:0x8b7bb8b7c956157b!8m2!3d10.8221589!4d106.6868454!16s%2Fm%2F02pyzdj"><i class="fas fa-map-marker-alt"></i> Nơi mua</a></div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 5 -->
+                <div class="product__">
+                    <div class="product_img">
+                        <a href="./html/product1.html">
+                            <img src="./img/Product/product_oled_s95b.webp" alt="" id="sppr5">
+                        </a>
+                    </div>
+                    <div class="product_short">
+                        <h3>65 inch OLED 4K S90C</h3>
+                        <p> Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                        <p>Thiết kế AirSlim</p>
+                    </div>
+                    <div class="product_function">
+                        <p>Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                        <p>Bộ xử lý Hình ảnh Crystal 4K</p>
+                        <p>Smart Hub</p>
+                        <div class="btn__buy">
+                            <button type="button" class="btn carttttt-btn" id="btn_cart5">Thêm giỏ hàng</button>
+                        </div>
+                        <div class="location"><a href="https://www.google.com/maps/place/Industrial+University+of+Ho+Chi+Minh+City/@10.8221589,106.6842651,17z/data=!3m1!4b1!4m6!3m5!1s0x3174deb3ef536f31:0x8b7bb8b7c956157b!8m2!3d10.8221589!4d106.6868454!16s%2Fm%2F02pyzdj"><i class="fas fa-map-marker-alt"></i> Nơi mua</a></div>
+                    </div>
+                </div>
+
+
+                <!-- PRODUCT 6 -->
+                <div class="product__">
+                    <div class="product_img">
+                        <a href="./html/product1.html">
+                            <img src="./img/Product/product_oled_s95c.webp" alt="" id="sppr6">
+                        </a>
+                    </div>
+                    <div class="product_short">
+                        <h3>77 inch QLED 4K S95C</h3>
+                        <p> Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                        <p>Thiết kế AirSlim</p>
+                    </div>
+                    <div class="product_function">
+                        <p>Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                        <p>Bộ xử lý Hình ảnh Crystal 4K</p>
+                        <p>Smart Hub</p>
+                        <div class="btn__buy">
+                            <button type="button" class="btn carttttt-btn" id="btn_cart6">Thêm giỏ hàng</button>
+                        </div>
+                        <div class="location"><a href="https://www.google.com/maps/place/Industrial+University+of+Ho+Chi+Minh+City/@10.8221589,106.6842651,17z/data=!3m1!4b1!4m6!3m5!1s0x3174deb3ef536f31:0x8b7bb8b7c956157b!8m2!3d10.8221589!4d106.6868454!16s%2Fm%2F02pyzdj"><i class="fas fa-map-marker-alt"></i> Nơi mua</a></div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 7 -->
+                <div class="product__" id="NEOQLED">
+                    <div class="product_img">
+                        <a href="./html/product1.html">
+                            <img src="./img/Product/product_qled_qn800c.webp" alt="" id="sppr7">
+                        </a>
+                    </div>
+                    <div class="product_short">
+                        <h3>85 inch Neo QLED 8K QN900C</h3>
+                        <p> Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                        <p>Thiết kế AirSlim</p>
+                    </div>
+                    <div class="product_function">
+                        <p>Công nghệ Dynamic Crystal Color</p>
+                        <p>Thiết kế AirSlim</p>
+                        <p>Bộ xử lý Hình ảnh Crystal 4K</p>
+                        <p>Smart Hub</p>
+                        <div class="btn__buy">
+                            <button type="button" class="btn carttttt-btn" id="btn_cart7">Thêm giỏ hàng</button>
+                        </div>
+                        <div class="location"><a href="https://www.google.com/maps/place/Industrial+University+of+Ho+Chi+Minh+City/@10.8221589,106.6842651,17z/data=!3m1!4b1!4m6!3m5!1s0x3174deb3ef536f31:0x8b7bb8b7c956157b!8m2!3d10.8221589!4d106.6868454!16s%2Fm%2F02pyzdj"><i class="fas fa-map-marker-alt"></i> Nơi mua</a></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- footer -->
+
+    <div class="footer" id="HOTROOO">
+        <div class="f_box">
+            <div class="foot_box">
+                <h2>Sản phẩm</h2>
+                <p class="p_footer_box">TV</p>
+                <p class="p_footer_box">OLED</p>
+                <p class="p_footer_box">QLED</p>
+                <p class="p_footer_box">HD</p>
+            </div>
+            <div class="foot_box">
+                <h2>Mua trực tuyến</h2>
+                <p class="p_footer_box">Ưu đãi sinh viên</p>
+                <p class="p_footer_box">Ưu đãi độc quyền</p>
+                <p class="p_footer_box">Tìm cửa hàng</p>
+                <p class="p_footer_box">Khám phá</p>
+            </div>
+            <div class="foot_box">
+                <h2>Bạn cần hỗ trợ</h2>
+                <p class="p_footer_box">Hỗ trợ mua trực tuyến</p>
+                <p class="p_footer_box">Đặt lịch sửa chữa</p>
+                <p class="p_footer_box">Trung tâm bảo hành</p>
+            </div>
+            <div class="foot_box">
+                <h2>Giới thiệu về chúng tôi</h2>
+                <a class="p_footer_box" href="./html/Gioithieu.html">Thành viên</a>
+                <a class="p_footer_box" href="./html/listsp.html">Sản phẩm</a>
+            </div>
+        </div>
+        <div class="policy_connect">
+            <div class="policy__">
+                <li>
+                    <a href="#">
+                        <p>Chính sách đổi trả</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <p>Chính sách bảo hành</p>
+                    </a>
+                </li>
+            </div>
+            <div class="connect_us">
+                <h3>Kết nối với chúng tôi</h3>
+                <div class="icon_boxx">
+                    <li><a href="https://www.facebook.com/sviuh"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/iuh.edu.vn/"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="https://www.youtube.com/@iuh.dhcntphcm"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://iuh.edu.vn/"><i class="fas fa-home"></i></a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal login -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="main">
+                    <div class="form signin">
+                        <div class="title">
+                            <h1>Đăng nhập account của bạn</h1>
+                        </div>
+                        <fieldset>
+                            <form class="formsig">
+                                <div class="form-group">
+                                    <label for="emailInput">Địa chỉ email</label>
+                                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
+                                        placeholder="Nhập địa chỉ email của bạn">
+                                    <span id="tb_email" style="color: red;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="passwordInput">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="passwordInput"
+                                        placeholder="Nhập mật khẩu của bạn">
+                                    <span id="tb_passDN" style="color: red;"></span>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberCheck">
+                                    <label class="form-check-label" for="rememberCheck">Ghi nhớ tài khoản của tôi</label>
+                                </div>
+                                <span id="tb_To_bu1" style="color: red;"></span>
+                                <button type="button" class="btn btn-primary" id="SigninAccount">Đăng nhập</button>
+                            </form>
+                        </fieldset>
+                        <p>Chưa có tài khoản ? <a href="/html/listDK.html" class="create">Tạo tài khoản</a></p>
+                    </div>
+                    <div class="form signup">
+                        <div class="title">
+                            <h1>Tạo tài khoản của bạn</h1>
+                        </div>
+                        <fieldset>
+                            <form class="formsig">
+                                <div class="form-group">
+                                    <label for="reemailInput">Địa chỉ email</label>
+                                    <input required="required" type="email" class="form-control" id="reemailInput"
+                                        aria-describedby="emailHelp" placeholder="Nhập địa chỉ email của bạn">
+                                    <span id="tb_Email_DK" style="color: red;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="repasswordInput">Mật khẩu</label>
+                                    <input required="required" type="password" class="form-control" id="repasswordInput"
+                                        placeholder="Nhập mật khẩu của bạn">
+                                    <span id="tb_passDK" style="color: red;"></span>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="repassword">Xác nhận mật khẩu</label>
+                                    <input required="required" type="password" class="form-control" id="repassword"
+                                        placeholder="Xác nhận mật khẩu">
+                                    <span id="tb_repassDK" style="color: red;"></span>
+                                        
+                                </div>
+                                <div class="form-group">
+                                    <label for="fnameInput">Nhập họ tên</label>
+                                    <input required="required" type="text" class="form-control" id="fnameInput"
+                                        placeholder="Họ và tên">
+                                        <span id="tb_HoTen" style="color: red;"></span>
+                                </div>
+                                <button id="dangki-btn" type="button" class="btn btn-primary">Đăng kí</button>
+                            </form>
+                        </fieldset>
+                        <p>Đã có tài khoản ? <a href="#" class="login">Đăng nhập</a></p>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let login =document.querySelector('.login')
+        let create =document.querySelector('.create')
+        let main =document.querySelector('.main')
+
+        create.onclick = function(){
+            main.classList.add('signupForm')
+        }
+        login.onclick = function(){
+            main.classList.remove('signupForm')
+        }
+
+        function KTDN(){
+                var rgc = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(  rgc.test($("#emailInput").val()) == true ) {
+                    $("#tb_email").html("Email hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_email").html("Email không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#emailInput").blur(KTDN);
+
+        function KTMK(){
+                var rgc = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{10,20}$/;
+                if(  rgc.test($("#passwordInput").val()) == true ) {
+                    $("#tb_passDN").html("Mật khẩu hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_passDN").html("Mật khẩu không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#passwordInput").blur(KTMK);
+
+
+        function KTDangKy(){
+                var rgc = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(  rgc.test($("#reemailInput").val()) == true ) {
+                    $("#tb_Email_DK").html("Email hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_Email_DK").html("Email không hợp lệ");          
+                    return false;
+                }
+        }        
+        $("#reemailInput").blur(KTDangKy);
+
+        function KTDangKyMK(){
+                var rgc = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{10,20}$/;
+                if(  rgc.test($("#repasswordInput").val()) == true ) {
+                    $("#tb_passDK").html("Mật khẩu hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_passDK").html("Mật khẩu không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#repasswordInput").blur(KTDangKyMK);
+
+
+        function KiemtraNhapLaiMK(){
+            const passwordInput = document.getElementById("repasswordInput");
+            const password = passwordInput.value;
+
+            const confirmPasswordInput = document.getElementById("repassword");
+            const confirmPassword = confirmPasswordInput.value;
+            if (password === confirmPassword){
+                $("#tb_repassDK").html("Mật khẩu đã trung khớp");  
+                    return true;
+                } else {
+                    $("#tb_repassDK").html("Mật khẩu không trùng khớp");          
+                    return false;
+                }
+        }
+        $("#repassword").blur(KiemtraNhapLaiMK);
+
+
+        function KiemtraHoTen() {
+            var rgc = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/;
+            if(  rgc.test($("#fnameInput").val()) == true ) {
+                    $("#tb_HoTen").html("Tên hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_HoTen").html("Tên không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#fnameInput").blur(KiemtraHoTen);
+        
+
+
+        $("#SigninAccount").click(function(){           
+            if ( !KTDN() || !KTMK() ){
+                $("#tb_To_bu1").html("Mời bạn nhập đúng và đủ thông tin")
+            }else {
+                $("#tb_To_bu1").html("");     
+            }
+            var mail = $("#emailInput").val();
+            var them = " Xin chào " + mail;
+            $("header h6").append(them);
+            $("#loginModal").modal("hide");
+            return true;
+        })
+
+        $("#dangki-btn").click(function(){
+            $("#loginModal").modal("hide");
+        })
+
+
+
+        var y = 0;
+        var z = 0 
+        var tong = 0;
+
+        $("#btn_cart1").click(function() {
+            y++;
+            z++;
+            $("#thongbao_carttt").html(y);
+            var tensp =  "43 inch Crystal UHD 4K CU8000";
+            var imgSrc = document.getElementById("sppr1").src;
+            var imgWidth = "120px";
+            var imgHTML = "<img src='" + imgSrc + "' style='width: " + imgWidth + ";' />";
+            var imgsp = "<td><img src="  + imgSrc + "></td>";
+            var giaa = 12899000;
+            tong = tong + giaa;
+            var thempr1 = "<tr> <td>" + (z) + "</td><td>" 
+                + tensp + "</td><td>" +  imgHTML + "</td><td>" 
+                + giaa + "</td></tr>";
+            $("table tbody").append(thempr1);
+            $("#thongbaogia").html(tong);
+           
+        })
+
+
+        $("#btn_cart2").click(function() {
+            y++;
+            z++;
+            $("#thongbao_carttt").html(y);
+            var tensp =  "43 inch Crystal UHD 4K CU8500";
+            var imgSrc = document.getElementById("sppr2").src;
+            var imgWidth = "120px";
+            var imgHTML = "<img src='" + imgSrc + "' style='width: " + imgWidth + ";' />";
+            var imgsp = "<td><img src="  + imgSrc + "></td>";
+            var giaa = 13869000;
+            tong+=giaa;
+            var thempr1 = "<tr> <td>" + (z) + "</td><td>" 
+                + tensp + "</td><td>" +  imgHTML + "</td><td>" 
+                + giaa + "</td></tr>";
+            $("table tbody").append(thempr1);
+            $("#thongbaogia").html(tong);
+        })
+
+        $("#btn_cart3").click(function() {
+            y++;
+            z++;
+            $("#thongbao_carttt").html(y);
+            var tensp =  "32 inch HD T4500";
+            var imgSrc = document.getElementById("sppr3").src;
+            var imgWidth = "120px";
+            var imgHTML = "<img src='" + imgSrc + "' style='width: " + imgWidth + ";' />";
+            var imgsp = "<td><img src="  + imgSrc + "></td>";
+            var giaa = 6900000;
+            tong+=giaa;
+            var thempr1 = "<tr> <td>" + (z) + "</td><td>" 
+                + tensp + "</td><td>" +  imgHTML + "</td><td>" 
+                + giaa + "</td></tr>";
+            $("table tbody").append(thempr1);
+            $("#thongbaogia").html(tong);
+        })
+
+        $("#btn_cart4").click(function() {
+            y++;
+            z++;
+            $("#thongbao_carttt").html(y);
+            var tensp =  "65 inch OLED 4K S90C";
+            var imgSrc = document.getElementById("sppr4").src;
+            var imgWidth = "120px";
+            var imgHTML = "<img src='" + imgSrc + "' style='width: " + imgWidth + ";' />";
+            var imgsp = "<td><img src="  + imgSrc + "></td>";
+            var giaa = 6390000;
+            tong+=giaa;
+            var thempr1 = "<tr> <td>" + (z) + "</td><td>" 
+                + tensp + "</td><td>" +  imgHTML + "</td><td>" 
+                + giaa + "</td></tr>";
+            $("table tbody").append(thempr1);
+            $("#thongbaogia").html(tong);
+        })
+
+        $("#btn_cart5").click(function() {
+            y++;
+            z++;
+            $("#thongbao_carttt").html(y);
+            var tensp =  "55 inch OLED 4K S95B";
+            var imgSrc = document.getElementById("sppr5").src;
+            var imgWidth = "120px";
+            var imgHTML = "<img src='" + imgSrc + "' style='width: " + imgWidth + ";' />";
+            var imgsp = "<td><img src="  + imgSrc + "></td>";
+            var giaa = 43899000;
+            tong+=giaa;
+            var thempr1 = "<tr> <td>" + (z) + "</td><td>" 
+                + tensp + "</td><td>" +  imgHTML + "</td><td>" 
+                + giaa + "</td></tr>";
+            $("table tbody").append(thempr1);
+            $("#thongbaogia").html(tong);
+        })
+
+        $("#btn_cart6").click(function() {
+            y++;
+            z++;
+            $("#thongbao_carttt").html(y);
+            var tensp =  "77 inch QLED 4K S95C";
+            var imgSrc = document.getElementById("sppr6").src;
+            var imgWidth = "120px";
+            var imgHTML = "<img src='" + imgSrc + "' style='width: " + imgWidth + ";' />";
+            var imgsp = "<td><img src="  + imgSrc + "></td>";
+            var giaa = 109899000;
+            tong+=giaa;
+            var thempr1 = "<tr> <td>" + (z) + "</td><td>" 
+                + tensp + "</td><td>" +  imgHTML + "</td><td>" 
+                + giaa + "</td></tr>";
+            $("table tbody").append(thempr1);
+            $("#thongbaogia").html(tong);
+        })
+
+        $("#btn_cart7").click(function() {
+            y++;
+            z++;
+            $("#thongbao_carttt").html(y);
+            var tensp =  "85 inch Neo QLED 8K QN900C";
+            var imgSrc = document.getElementById("sppr7").src;
+            var imgWidth = "120px";
+            var imgHTML = "<img src='" + imgSrc + "' style='width: " + imgWidth + ";' />";
+            var imgsp = "<td><img src="  + imgSrc + "></td>";
+            var giaa = 219890000;
+            tong+=giaa;
+            var thempr1 = "<tr> <td>" + (z) + "</td><td>" 
+                + tensp + "</td><td>" +  imgHTML + "</td><td>" 
+                + giaa + "</td></tr>";
+            $("table tbody").append(thempr1);
+            $("#thongbaogia").html(tong);
+        })
+
+        
+
+    </script>
+</body>
+
+</html>

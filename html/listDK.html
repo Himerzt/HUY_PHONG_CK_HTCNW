@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    <style>
+        /* Header */
+        li{
+            list-style-type: none;
+        }
+        .header img {
+            width: 100px;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            height: 60px;
+            align-items: center;
+            box-shadow: 0 .5px  rgba(0, 0, 0, .2);
+            padding-left: 0%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            background-color: #fff;
+        }
+
+        .header .menu_bar_cover,
+        .header .side_bar_cover
+        {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .header .menu_bar_cover li
+        {
+            margin: 0 10px;
+            padding: 3px 6px;
+        }
+        .header .side_bar_cover li
+        {
+            margin: 0 6px;
+            padding: 2px 2px;
+        }
+        .header .menu_bar_cover li a,
+        .header .side_bar_cover li a
+        {
+            height: 100%;
+            width: 100%;
+            color: black;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .header .menu_bar_cover li:hover,
+        .header .side_bar_cover li:hover{
+            box-shadow: 0 2px  rgba(0, 0, 0, .6),
+            0 2.25px  rgba(116, 37, 37, 0.6),
+            0 2.5px  rgba(168, 38, 38, 0.6),
+            0 2.75px  rgba(122, 20, 20, 0.6);
+            transition: all .35s ease-in-out;
+            opacity: .7;
+            color: red;
+        }
+    </style>
+                        
+      
+<body>
+
+    <header class="header">
+        <div class="logo_bar">
+            <a href="../index.html"><img src="../img/logo_1.png" alt=""></a>
+        </div>
+        <div class="menu_bar">
+            <ul class="menu_bar_cover">
+                <li><a href="#TiVi">TV</a></li>
+                <li><a href="#NEOQLED">Neo QLED</a></li>
+                <li><a href="#OLEDDD">OLED TV</a></li>
+                <li><a href="#CRYSTALLL">Crystal UHD</a></li>
+                <li><a href="#fhd_tv">Full HD & HD TV</a></li>
+            </ul>
+        </div>
+        <div class="side_bar">
+            <ul class="side_bar_cover">
+                <li><a href="#HOTROOO">Hỗ trợ</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+    <div class="container" style="margin-top: 80px;">
+        <li>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#SignInModal">
+                Đăng ký
+            </button>
+        </li>
+        <center><h3>Danh sách tài khoản</h3></center>
+
+    </div>
+
+    <div class="modal fade" id="SignInModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Tạo tài khoản của bạn</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                        <span aria-hidden="true">&times;</span>
+                    </button>                   
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="reemailInput">Địa chỉ email</label>
+                            <input required="required" type="email" class="form-control" id="reemailInput"
+                                aria-describedby="emailHelp" placeholder="Nhập địa chỉ email của bạn">
+                            <span id="tb_Email_DK" style="color: red;"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="repasswordInput">Mật khẩu</label>
+                            <input required="required" type="password" class="form-control" id="repasswordInput"
+                                placeholder="Nhập mật khẩu của bạn">
+                            <span id="tb_passDK" style="color: red;"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="repassword">Xác nhận mật khẩu</label>
+                            <input required="required" type="password" class="form-control" id="repassword"
+                                placeholder="Xác nhận mật khẩu">
+                            <span id="tb_repassDK" style="color: red;"></span>
+                                
+                        </div>
+                        <div class="form-group">
+                            <label for="fnameInput">Nhập họ tên</label>
+                            <input required="required" type="text" class="form-control" id="fnameInput"
+                                placeholder="Họ và tên">
+                                <span id="tb_HoTen" style="color: red;"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer"></div>
+                <button id="dangki-btn" type="button" class="btn btn-primary" data-dismiss="modal">Đăng kí</button>
+            </div>
+        </div>
+    </div>
+    <br><br><hr>    
+   <div class="container">
+        <table class="table table-borderd table-hover">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Email</th>
+                    <th>Họ tên</th>
+                    <th>Mật khẩu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>dhcntphcm@gmail.com</td>
+                    <td>Cong Nghiep</td>
+                    <td>dhcntphcm9999</td>
+                </tr>
+            </tbody>
+        </table>
+   </div>
+
+
+
+   <script>
+        function KTDangKy(){
+                var rgc = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(  rgc.test($("#reemailInput").val()) == true ) {
+                    $("#tb_Email_DK").html("Email hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_Email_DK").html("Email không hợp lệ");          
+                    return false;
+                }
+        }               
+        $("#reemailInput").blur(KTDangKy);
+
+        function KTDangKyMK(){
+                var rgc = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{10,20}$/;
+                if(  rgc.test($("#repasswordInput").val()) == true ) {
+                    $("#tb_passDK").html("Mật khẩu hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_passDK").html("Mật khẩu không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#repasswordInput").blur(KTDangKyMK);
+
+
+        function KiemtraNhapLaiMK(){
+            const passwordInput = document.getElementById("repasswordInput");
+            const password = passwordInput.value;
+
+            const confirmPasswordInput = document.getElementById("repassword");
+            const confirmPassword = confirmPasswordInput.value;
+            if (password === confirmPassword){
+                $("#tb_repassDK").html("Mật khẩu đã trung khớp");  
+                    return true;
+                } else {
+                    $("#tb_repassDK").html("Mật khẩu không trùng khớp");          
+                    return false;
+                }
+        }
+        $("#repassword").blur(KiemtraNhapLaiMK);
+
+
+        function KiemtraHoTen() {
+            var rgc = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/;
+            if(  rgc.test($("#fnameInput").val()) == true ) {
+                    $("#tb_HoTen").html("Tên hợp lệ");  
+                    return true;
+                } else {
+                    $("#tb_HoTen").html("Tên không hợp lệ");          
+                    return false;
+                }
+        }
+        $("#fnameInput").blur(KiemtraHoTen);
+        
+        var i = 1;
+
+        $("#dangki-btn").click(function(){    
+            i = i +1 ;       
+            if ( !KTDangKy() || !KTDangKyMK() || !KiemtraNhapLaiMK || !KiemtraHoTen ){
+                alert("Mời bạn nhập đúng và đủ thông tin");
+                return false;
+            }else {     
+                var email = $("#reemailInput").val();
+                var passs = $("#repasswordInput").val();
+                var namee = $("#fnameInput").val();
+                var them1 = "<tr> <td>" + (i) + "</td><td>" + email + "</td><td>" +  namee + "</td><td>" + passs + "</td></tr>";
+                $("table tbody").append(them1);
+                return true;          
+                $("#SignInModal").modal("hide");                    
+            }
+        })               
+
+        
+
+        
+   </script>
+    
+    
+</body>
+</html>
